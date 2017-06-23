@@ -6,7 +6,7 @@
 #AutoIt3Wrapper_UseUpx=Y
 #AutoIt3Wrapper_Res_Comment=Developed by Juno_okyo
 #AutoIt3Wrapper_Res_Description=Developed by Juno_okyo
-#AutoIt3Wrapper_Res_Fileversion=1.0.0.2
+#AutoIt3Wrapper_Res_Fileversion=1.0.0.4
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y
 #AutoIt3Wrapper_Res_ProductVersion=1.0.0.0
 #AutoIt3Wrapper_Res_LegalCopyright=(C) 2017 Juno_okyo. All rights reserved.
@@ -164,7 +164,7 @@ EndFunc
 
 Func getManifestPath($path)
 	Local $tempArr = _FileListToArray($path, '*', 2, True)
-	If Not @error And $tempArr[0] == 1 Then
+	If Not @error And $tempArr[0] > 0 Then
 		Return $tempArr[1] & '\manifest.json'
 	Else
 		Return False
