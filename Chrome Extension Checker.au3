@@ -29,7 +29,7 @@
 _Singleton(@ScriptName)
 Opt('MustDeclareVars', 1)
 
-Global Const $EXTENSIONS_PATH = @LocalAppDataDir & '\Google\Chrome\User Data\Default\Extensions\'
+Global Const $EXTENSIONS_PATH = getDefaultExtensionsPath()
 
 #Region ### START Koda GUI section ### Form=
 Global $Form1 = GUICreate("[J2TEAM] Chrome Extension Checker by Juno_okyo", 700, 425)
@@ -81,6 +81,18 @@ While 1
 
 	EndSwitch
 WEnd
+
+Func getDefaultExtensionsPath()
+	Local $path = @LocalAppDataDir & '\Google\Chrome\'
+
+	If Not FileExists($path) Then
+		$path = @LocalAppDataDir & '\CocCoc\Browser\'
+
+		If Not FileExists($path) Then Return ''
+	EndIf
+
+	Return $path & 'User Data\Default\Extensions\'
+EndFunc
 
 Func startScan()
 	GUICtrlSetData($Edit1, '')
