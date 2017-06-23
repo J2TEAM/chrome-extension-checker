@@ -6,12 +6,13 @@
 #AutoIt3Wrapper_UseUpx=Y
 #AutoIt3Wrapper_Res_Comment=Developed by Juno_okyo
 #AutoIt3Wrapper_Res_Description=Developed by Juno_okyo
-#AutoIt3Wrapper_Res_Fileversion=1.0.0.1
+#AutoIt3Wrapper_Res_Fileversion=1.0.0.2
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y
 #AutoIt3Wrapper_Res_ProductVersion=1.0.0.0
 #AutoIt3Wrapper_Res_LegalCopyright=(C) 2017 Juno_okyo. All rights reserved.
 #AutoIt3Wrapper_Res_Field=CompanyName|J2TeaM
 #AutoIt3Wrapper_Res_Field=Website|https://junookyo.blogspot.com/
+#AutoIt3Wrapper_Compile_both=Y
 #EndRegion AutoIt3Wrapper directives section
 
 #include <ButtonConstants.au3>
