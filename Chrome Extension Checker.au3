@@ -29,7 +29,7 @@
 _Singleton(@ScriptName)
 Opt('MustDeclareVars', 1)
 
-Global Const $EXTENSIONS_PATH = 'C:\Users\' & @UserName & '\AppData\Local\Google\Chrome\User Data\Default\Extensions\'
+Global Const $EXTENSIONS_PATH = @LocalAppDataDir & '\Google\Chrome\User Data\Default\Extensions\'
 
 #Region ### START Koda GUI section ### Form=
 Global $Form1 = GUICreate("[J2TEAM] Chrome Extension Checker by Juno_okyo", 700, 425)
@@ -109,6 +109,8 @@ Func startScan()
 EndFunc
 
 Func checkExtension($path, $extension)
+	If StringLen($extension) <> 32 Then Return False
+
 	_log('Checking extension: ' & $extension & @TAB)
 
 	; Ignore IDs
